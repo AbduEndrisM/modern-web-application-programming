@@ -2,8 +2,9 @@
 Modern Web Application Programming - CS572
 
 
-In this course you will learn the Reactive Programming Architecture of SPA (Single Page Web Applications) along with all the necessary skills to build a full Modern Web Application. Technologies include: NodeJS, ExpressJS, TypeScript, Angular, Firebase and NoSQL databases (MongoDB). The course will cover:
+In this course you will learn the Reactive Programming Architecture of SPA (Single Page Web Applications) along with all the necessary skills to build a full Modern Web Application. Technologies include: NodeJS, ExpressJS, TypeScript, Angular, Firebase and NoSQL databases (MongoDB). 
 
+The course will cover:
 
 
 How the C++ V8 engine and asynchronous code work in Node and the Node event loop.
