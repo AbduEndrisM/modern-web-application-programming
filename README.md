@@ -14,3 +14,4 @@ How NoSQL databases work: Mongo Shell, Aggregation framework, Replica Sets, Clus
 
 Deep understanding of how Angular (backed by Google) works, Change Detection, Reactive RxJs programming with Observables and Subjects, The 
 Shadow DOM, Zones, Modules and Components, Custom Directives and Pipes, Services and Dependency Injection, Angular Compiler, JIT and AOF Compilation, Forms (Template Driven and Data Driven), Data Binding, Routing, Guards and Route Protection, HTTP client, JWT JSON Web Token Authentication.
+
