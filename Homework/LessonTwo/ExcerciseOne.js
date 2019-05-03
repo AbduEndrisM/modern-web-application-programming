@@ -1,17 +1,25 @@
-//Using promise
-const promise= function(input){
-   return new Promise((resolve, reject)=>{
-    const x =0;   
-    if (input%2==0){
-            x=input;
-       }
-       resolve (x);
+const { from } = require('rxjs');
+const { filter } = require('rxjs/operators');
 
-    });
-};
-promise([1,2,3,4,4]).then((output)=>{
-    console.log(output)
-});
+Array.prototype.even = function () {
+   var evenFunct = function () {
+        var evennumbers = [];
+        from(this)
+            .pipe(
+                filter(number => number % 2 == 0)
+            )
+            .subscribe(
+                evenValues => {
+                 
+                    evennumbers.push(evenValues);
+                }
+            );
+        console.log(evennumbers);
+    };
+    setTimeout(evenFunct.bind(this), 0);
+}
 
-
-// ["This house is nice !"].filterWords(["house","nice"]).then(data=>console.log(data));
+console.log('Start');
+[1, 2, 3, 4, 5, 6, 7, 8].even();
+// [1, 2, 3, 4, 5, 6, 7, 8].odd();
+console.log('End');
