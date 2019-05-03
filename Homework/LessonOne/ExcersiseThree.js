@@ -7,11 +7,8 @@ const item ={
 
 function applyCoupon(item) {
     let temp = item;
-
-
-    return (p)=>{
-
-        temp.price = temp.price - temp.price * p/100;
+    return (percent)=>{
+        temp.price = temp.price - temp.price * percent/100;
         return temp;
 
     }
