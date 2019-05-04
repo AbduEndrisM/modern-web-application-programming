@@ -1,4 +1,4 @@
-{
+
     const axios = require('axios') 
     const express = require('express');
     const app = express();
@@ -25,7 +25,9 @@ app.disable("etag");
                 response.write('<br>')
                 response.write("Gender: "+element.gender)
                 response.write('<br>')
-                response.write(element.email)
+                response.write("Address: " + element.location.street +" "+ element.location.city+", "+ element.location.state+", "+ element.location.postcode);
+                response.write('<br>')
+                response.write("Name: " + element.email );
                 response.write('<hr>')
             });
             response.end();
@@ -34,4 +36,3 @@ app.disable("etag");
         console.log('init 5');
     })
     app.listen(3000, () => console.log('Running on... 3000'));
-}
