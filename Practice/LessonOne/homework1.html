@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script>
+function filterWords(filter) {
+        var wordInput = "This house is nice";
+        wordInput = wordInput.toLowerCase();
+        
+        var string = wordInput.split(" "); 
+        var foundBadWords = string.filter(el => {
+            filter.includes(el);   
+        });
+
+        var foundGoodWords = string.filter(el => !filter.includes(el)); 
+        
+        console.log("\n Found good words \n " + foundGoodWords);
+        console.log("\n Found bad words \n" + foundBadWords);
+
+    }
+    filterWords(["house", "nice"]);
+
+
+</script>
+
+    <body>
+
+check it from console. 
+    </body>
+</html>

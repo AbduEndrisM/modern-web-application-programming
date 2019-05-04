@@ -1,0 +1,52 @@
+
+<html>
+<head>
+	<script type="text/javascript">
+		
+
+const cleanRoom = function (){
+	return new Promise (function(resolve, reject){
+		resolve( " Room cleaned!");
+	}) ;
+}
+
+const removeGarbage = function (message){
+	return new Promise (function(resolve, reject){
+		resolve(message+ " Garbage removed!");
+	}) ;
+}
+const awardIceCream = function (message){
+	return new Promise (function(resolve, reject){
+		resolve(message+ " Icecream awarded!");
+	}) ;
+}
+/*
+//excute each promise individually 
+cleanRoom().then (function (result){
+	return removeGarbage(result)
+	
+	}).then (function(result){
+		return awardIceCream(result)
+	}).then (function(result){
+		console.log(result + " FInished!!!");
+	});*/
+
+/*
+	//excute all promises at a time
+	Promise.all ([cleanRoom(), removeGarbage(), awardIceCream()]).then (function(){
+		console.log("All promises finshed!")
+	})
+
+*/
+
+	// If only one of the promise is enough 
+
+	Promise.race ([cleanRoom(), removeGarbage(), awardIceCream()]).then (function(){
+		console.log("One of the promises is finshed!")
+	})
+	</script>
+</head>
+<body>
+	<p> Check the output from the console</p>
+</body>
+</html>
