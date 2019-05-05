@@ -11,8 +11,34 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
+
+//ejs
 app.set('views', path.join(__dirname, 'views'));
+// app.set('views', './src/views');
 app.set('view engine', 'ejs');
+
+
+// //Jade
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'jade');
+
+// //swig
+// app.engine('html', swig.renderFile);
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'html');
+
+//handlebars
+// app.engine('hbs', handlebars.engine);
+// app.set('view engine', 'handlebars');
+
+
+
+
+
+
+
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
