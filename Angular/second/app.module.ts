@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MultiPipe } from './multi.pipe';
+import { Counter } from './counter';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MultiPipe
-    ],
+    Counter
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule

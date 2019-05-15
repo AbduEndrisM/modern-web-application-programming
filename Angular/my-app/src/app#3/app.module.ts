@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MultiPipe } from './multi.pipe';
+import { MakeBiggerDirective } from './make-bigger.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MultiPipe
+    MakeBiggerDirective
     ],
   imports: [
     BrowserModule,

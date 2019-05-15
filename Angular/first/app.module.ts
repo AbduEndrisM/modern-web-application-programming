@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MultiPipe } from './multi.pipe';
+import { HeroesComponent } from './heroes/heroes.component';
+import { DateComponent } from './date/date.component';
+import { LoopComponent } from './loop/loop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MultiPipe
-    ],
+    HeroesComponent,
+    DateComponent,
+    LoopComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule

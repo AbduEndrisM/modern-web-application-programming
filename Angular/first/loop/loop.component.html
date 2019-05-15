@@ -1,0 +1,20 @@
+
+ <!--   <div>
+ <p>Name: {{user.name}} </p>
+ <p>Sex: {{user.sex}} </p>
+ <p> Dept: {{user.dept}} </p>
+ <p> Course: {{user.course}} </p>
+ <p> Phone: {{user.phone[0]}}   ,
+ {{user.phone[1]}} 
+</p>
+</div> -->
+
+<div>
+  <div>
+    Name: {{user.name}} <br>
+    Sex: {{user.sex}} <br>
+    Dept: {{user.dept}} <br>
+    Course: {{user.course}} </div>
+<div *ngIf="user.phone.length>0"> Phone:  
+<p *ngFor= "let x of user.phone">{{x}} </p>
+</div>
