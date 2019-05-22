@@ -1,0 +1,86 @@
+	---Dependency Injection---
+
+- Dependency Injection- is for services
+DI is asking fro the instance rather than creating an instance.
+
+Servies: used to provide us access ti common functionalities from varios compononts.
+
+service: created using cli or manual
+service is just a class with some logic and Angular will crate instanec of it to be sahred by components
+Angular provides local and global services, if its global=app.module knows it. 
+
+global servies have @Injectable {ProdivedIn:root}. and can be accessed by all comps
+@injectable can be used in the component or in the app.module. the component is recommended because its tree shakable.
+TreeShakable: if we dont use the service the sevice will be bundled. [google]
+
+if we want the service for locla component Providers= [myService].  not root
+
+always childeren share the same instance (servie)... and from down to up doesnt work
+we should provide services at higher level, i.e parent/root. unless we cant access them
+
+to access the servie we declare it in the constructor of the comp. requesting the service
+ 
+If we have some request (ajax, http,.....) in the constrcutor we need to have the @Injectable decorator. i.e makes the classs injectable. 
+
+All Angular services are provided by Angular at core level and no need to inject.like Rendere2, ElementRef
+
+To communicate between 2 servicec we create an observable and subscribe (inside ngOnInit) from another component.
+
+
+----Routing----
+
+PushState = change the state of the url 
+refresh =will request for the current url, 
+server side we should render to index.html and a **. to check if it is not to the homepage
+client side rendering has to be differ from server sode.
+
+we use [routerLink] not a href...because a href directly request for server.
+
+base href= is an html5 tag used the browser fetch relative links.... in ANgular its very helpful to use if the app is feathcing not in the root
+
+snapshot is a memory that angular uses to rerender after a tmeplate is distoyed.
+
+query params: anything inside a url parameter (?name"Abdu":...)to use we shoud a service called  ActivatedRoute.
+abud.com/?name:abdu = param
+abdu.com/abdu = query param
+
+Fragments: used to jump to specific place in our page...(like top/dow using #)
+
+
+Obseravable.Subscription: whenever we use subscribetion dont forget to distoru using ngOnDestroy()
+
+Imperative routing=navigate throw our code routes
+
+Gurds: canAcitvete = chaeck when someone wants to access the route
+canDeacticate = check whether the user forget to do a atask b4 leaving the current route
+
+we have app Module and import the rest into it [Browser Module, Router Module]
+
+In custom Module- services are public and compnents are privte, [hybrid = comp+serv]
+if we want to make them public we export them and access them in other module.
+
+
+components should be imported anytie we want
+services are enough to be imported one time 
+
+Browser modules =has components =ngFor, ngIf..
+Browser module =has services = ElementRef, Rendere2..
+
+to import a module we need to know which one to import comp or service.
+
+Browser module has 2 version = common and browser. if we want to import only component of the browser module we import this common module. If we want both sev=rvice and comp we import the brwser module.
+
+Angular Material = are components
+Angular services= http client modules....
+
+
+--- Lazy loading ---
+splitting the loading to make fast ans easy shippment. 
+
+
+
+
+
+
+
+

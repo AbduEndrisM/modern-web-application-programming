@@ -1,0 +1,71 @@
+Diff Algorithm used to map changes from angular state to DOM
+
+ReactJS=change eaxh state change from state to virtual DOM and then to the actual DOM. And uses diff algorithm to check if there is a change between 2 virtual DOMs.and if theres a change patch is done
+setState=chnages the state in ReactJS
+
+IN ANgular XHR, Events(user interaction) and timer makes the state change. all are Asynch. So,we should first differentiate by whom chage is triggered.
+
+Angular1.x = AngualrJS, Angular 2x. Angular
+
+It used to be have 2 phases to bind/patch and now its happenign only with 1 phase
+
+NgZone- if we have something to excute afer timer stops, we can use monker-patch to 
+
+zones used to detect chnaage detection and trigger the cycle in the DOM.
+
+diff algorithm used to chnage the detection cycle of angular.. and is very fast, beacuse Angular by deafualt generates VM friendly monomrhic code.
+
+when there is a change all the components checked, because their maybe  branchs or modules whiich ue the same reference to that component .. which should be 
+
+ngOnCHnage= trigger when there is a reference is chnage. and reference is chnage when we use immutable data strucutre.
+
+chnageDtection: ChangeDetectionStartegy.onPush = dont run chnage onCHnage ditection but onPush
+
+observaleble is an immutable datastructre
+
+verfication phase of anular state change is used to verify the detection is going good.
+
+if we checked after view, we can fix it by using different ways (production and develpment phase).. production is using asynch methoc (settimout) or   . using development mode we can ignore the eerror and fix it before verifcation is called
+
+Directives
+until now we discusses how to render and do stuff on template level
+directies used to add behavior to their host elements.
+
+attribute directives: doesnt require ...DOM firendly directives
+structural direct. .... and start with *
+componenets are directies that have template. others doesnt have
+
+browser module provide all the 3 direcitves
+
+*ngIf - if true added to the DOM else not
+<ng-template [ngIf] = is like any html tag... but in angular we use *ngIf
+for else part = we will pass a template refernece (#ng-template #template name)
+
+*ngSwitch 
+
+ngStyle 
+[Style] = used to give a css propertiy - is DOM property no *
+ngStyle = multiple properties {object}
+
+ngClass
+
+*ngFor - structural direcitve
+
+HostListner  - if a component wants to emit an event i can listen it inside my directiev =
+HostBInding - serve as a shortcut for a propertiy in my directive
+
+
+
+Pipe
+pipes used to transform displayed value within a template
+{{dateObj | date}} - transform the all long value of the dateObj variable to short 12/12/2012
+create pipe using 2 methods cli and @Pipe decorator
+pure pipe: doesnt rerun for chnage detection. can make them impure by assigning false value
+impure pipe: run on every single change
+
+Asynch pipe= impure pipe - featch asynch returned data form promises or observalbels
+
+keyvalue pipe=
+
+
+

@@ -8,7 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello World!';
-   
-  }
+  birthday = new Date();
+
+
+  toggle = true; // start with true == shortDate
+
+  get format() { 
+    return this.toggle ? 'shortDate' : 'fullDate'; }
+  toggleFormat() { this.toggle = !this.toggle; }
+
+}
 
 

@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MakeBiggerDirective } from './make-bigger.directive';
-
+import { AbduDirective } from './abdu.directive';
+ 
 @NgModule({
   declarations: [
     AppComponent,
-    MakeBiggerDirective
-    ],
+    AbduDirective
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
