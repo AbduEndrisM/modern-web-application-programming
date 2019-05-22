@@ -1,0 +1,22 @@
+
+
+<div> 
+    The hero's birthday is {{ birthday | date }}
+</div>
+
+
+<div> 
+    <button (click)="toggleFormat()">Toggle Format</button>
+    <p>The hero's birthday is {{ birthday | date:format }}</p>
+    
+</div>
+
+<div>
+The chained hero's birthday is
+<p>{{  birthday | date:'fullDate' | lowercase}} </p>
+The chained hero's birthday is
+<p>{{  birthday | date:'shortDate' | uppercase}} </p>
+</div>
+
+<router-outlet></router-outlet>
+ 
